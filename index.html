@@ -18,48 +18,47 @@
     <header class="bg-gray-700 p-2 col-span-2">
         <div class="flex flex-row justify-between m-2">
             <h1 class=" font-extrabold text-xl text-left text-white cursor-pointer">FantasyFootball<span class="text-sky-400">GenV</span></h1>
-            <button class="hover:bg-gray-500 p-1 rounded-sm cursor-pointer"><i class="fa-solid fa-plus fa-xl" style="color: #ffffff;"></i></button>
+            <button id="addBtn" class="hover:bg-gray-500 p-1 rounded-sm cursor-pointer"><i class="fa-solid fa-plus fa-xl" style="color: #ffffff;"></i></button>
         </div>
     </header>
 
-    <section class="bg-gray-700 p-4">
-        <div class="flex flex-col gap-4">
-            <div class="cart flex bg-gray-600 rounded-lg p-2 justify-between">
-                <div class="flex gap-2">
-                    <div class="PFP rounded-md bg-[url(img/pablo.webp)] size-12 bg-cover" ></div>
-                    <div class="text-left text-sm flex flex-col justify-end">
-                        <h2>Pablo</h2>
-                        <h2>Post : <span>Attaquant</span></h2>
-                    </div>
-                </div>
-                <div class="flex flex-col">
-                    <button class="hover:bg-gray-500 p-1 rounded-sm cursor-pointer"><i class="fa-solid fa-plus fa-xl" style="color: #ffffff;"></i></button>
-                    <small>10M$</small>
-                </div>
-            </div>
-            <div class="cart flex bg-gray-600 rounded-lg p-2 justify-between">
-                <div class="flex gap-2">
-                    <div class="PFP rounded-md bg-[url(img/pablo.webp)] size-12 bg-cover" ></div>
-                    <div class="text-left text-sm flex flex-col justify-end">
-                        <h2>Pablo</h2>
-                        <h2>Post : <span>Attaquant</span></h2>
-                    </div>
-                </div>
-                <div class="flex flex-col">
-                    <button class="hover:bg-gray-500 p-1 rounded-sm cursor-pointer"><i class="fa-solid fa-plus fa-xl" style="color: #ffffff;"></i></button>
-                    <small>10M$</small>
-                </div>
-            </div>
+    <section class="bg-gray-700 p-4 rounded-md">
+        <div id="playersCol" class="flex flex-col gap-4">
+
         </div>
 
     </section>
-    <section class="grid grid-flow-col grid-cols-2">
-        <section >
+    <section onload="setPlayers()" class=" bg-gray-700 rounded-md grid grid-flow-col grid-cols-2">
+        <section class="m-4">
             <div class="bg-[url(img/Fieled.jpg)] bg-cover size-64">
 
             </div>
         </section>
     </section>
+    <seciont id="modalADD" class="bg-gray-700 z-1 fixed hidden">
+        <header class="p-2">
+            <div class="flex justify-between">
+                <h2>Add a player</h2>
+                <button class="p-2 hover:bg-gray-400" id="closeBtn" class="cursor-pointer"><i class="fa-solid fa-xmark" style="color: #ffffff;"></i></button>
+            </div>
+        </header>
+        <div class="flex flex-col m-4">
+            <div class="size-24 bg-gray-500 rounded-lg"></div>
+            <label>Fullname</label>
+            <input placeholder="Fullname" type="text" id="nameInput" class="bg-gray-500 m-2 p-2 rounded-md">
+            <label>Position</label>
+            <select id="inputPosition"  class="bg-gray-500 m-2 p-2 rounded-md">
+                <option value="" hidden selected>Please Choose</option>
+                <option>Attacker</option>
+                <option>Defender</option>
+                <option>Middfielder</option>
+                <option>GoalKeeper</option>
+            </select>
+            <label>Price</label>
+            <input type="number" max="20" min="0" placeholder="Price is calulated in Millions" id="inputPrice" class="bg-gray-500 m-2 p-2 rounded-md">
+            <button id="submitPlayer" type="submit" class="m-2 p-2 bg-sky-600 rounded-md hover:bg-sky-700 cursor-pointer text-white">Add</button>
+        </div>
+    </seciont>
     <script src="script.js"></script>
 </body>
 </html>

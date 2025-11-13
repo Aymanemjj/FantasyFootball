@@ -1,18 +1,18 @@
-{
-    "Players":[
-        {
-            "name":"Lionel messi",
-            "Post": "Attaquer",
-            "Nationality": "Argentine",
-            "Prix": "20m$",
-            "Photo": "img/LionelMessi.jpg"
-        },
-        {
-            "name":"Cristiano Ronaldo",
-            "Post": "Attaquer",
-            "Nationality": "Portugal",
-            "Prix": "25m$",
-            "Photo": "img/CristianoRonaldo.jpg"
-        }
-    ]
-}
+
+[
+    {
+        "name":"Lionel messi",
+        "post": "Attaquer",
+        "nationality": "Argentine",
+        "price": "20m$",
+        "photo": "img/LionelMessi.jpg"
+    },
+    {
+        "name":"Cristiano Ronaldo",
+        "post": "Attaquer",
+        "nationality": "Portugal",
+        "price": "25m$",
+        "photo": "img/CristianoRonaldo.jpg"
+    }
+
+]
