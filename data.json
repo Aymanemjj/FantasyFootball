@@ -1,0 +1,18 @@
+{
+    "Players":[
+        {
+            "name":"Lionel messi",
+            "Post": "Attaquer",
+            "Nationality": "Argentine",
+            "Prix": "20m$",
+            "Photo": "img/LionelMessi.jpg"
+        },
+        {
+            "name":"Cristiano Ronaldo",
+            "Post": "Attaquer",
+            "Nationality": "Portugal",
+            "Prix": "25m$",
+            "Photo": "img/CristianoRonaldo.jpg"
+        }
+    ]
+}
